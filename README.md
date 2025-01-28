@@ -30,7 +30,7 @@ This project implements a reinforcement learning environment for solving a maze 
    ```
 3. Open the notebook in Jupyter:
    ```bash
-   jupyter notebook reinforcement_maze.ipynb
+   jupyter notebook depth_limit_maze.ipynb
    ```
 
 ---
