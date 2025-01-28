@@ -1,15 +1,14 @@
 # Maze Shortest Path Planning with Depth Limited Reinforcement Learning 
 
 ## Project Overview
-This project implements a reinforcement learning environment for solving a maze navigation problem. The goal is to generate random mazes, train an agent using reinforcement learning, and enable the agent to find the optimal path from a any point to an endpoint.  
+This project implements a reinforcement learning environment for solving a maze navigation problem. To achieve more efficiency without sacrificing accuracy, current state dictionary and debt limit convergence are used. The goal is to generate random mazes, train an agent using reinforcement learning, and enable the agent to find the optimal path from a any point to an endpoint.  
 
 ## Features
 - **Random Maze Generation**: Dynamically generates mazes with varying structures and obstacle placements.
 - **Random Start States**: Initializes random starting positions for the agent at the beginning of every epoch, ensuring diverse training scenarios.
-- **Graph Representation**: Represents the maze as a graph where each cell is a node, and valid movements are edges.
-- **State Graph with Valid Moves**: Uses a dictionary to create a valid state graph, avoiding walls and blocks, ensuring movements are restricted to traversable paths.
+- **State Graph with Valid Moves**: Represents the maze as a graph where each cell is a node, and valid movements are edges. Uses a dictionary to create a valid state graph, avoiding walls and blocks, ensuring movements are restricted to traversable paths.
 - **Reinforcement Learning Algorithms**: Integrates Deep Q-Network (DQN) for training the agent.
-- **Visualization Tools**: Displays the maze and highlights the agent's path during training and testing.
+- **Depth Limit**: In each epoch, efficiency is achieved by setting limits on the steps.
 - **GPU Support**: Leverages PyTorch to utilize CUDA if available for accelerated computation.
 
 ---
@@ -37,7 +36,7 @@ This project implements a reinforcement learning environment for solving a maze 
 ---
 
 ## File Structure
-- **reinforcement_maze.ipynb** - Main notebook implementing maze generation and reinforcement learning.
+- **depth_limit_maze.ipynb** - Main notebook implementing maze generation and reinforcement learning.
 - **images/** - Optional folder for storing images.
 
 ---
