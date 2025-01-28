@@ -93,13 +93,15 @@ This project implements a reinforcement learning environment for solving a maze 
 
 ### 3. Reinforcement Learning Algorithm
 - **Agent Training and Action Selection:**
-  Includes placeholder code for implementing Q-learning or DQN.
+  Includes placeholder code for implementing DQN.
   ```python
   class QLearningAgent:
       def __init__(self, ...):
           # Initialize agent parameters
           pass
   ```
+- **Depth Limit:**
+  It divides the problem into subproblems by limiting the agent's steps in each iteration to twice the size of the maze and tries to approach the global optimum with local optima. It was expected to reach accuracy while increasing efficiency in larger and more complex environments. The results of the tests are as follows:
 
 - **Training Loop:**
   Iterates through episodes to update policies and learn optimal paths. Random start states are used in each epoch to enhance exploration and generalization.
