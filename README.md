@@ -1,4 +1,4 @@
-# README for Maze Reinforcement Learning Environment
+# Maze Shortest Path Planning with Depth Limited Reinforcement Learning 
 
 ## Project Overview
 This project implements a reinforcement learning environment for solving a maze navigation problem. The goal is to generate random mazes, train an agent using reinforcement learning, and enable the agent to find the optimal path from a any point to an endpoint.  
