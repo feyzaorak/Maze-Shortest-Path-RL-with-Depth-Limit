@@ -101,9 +101,9 @@ This project implements a reinforcement learning environment for solving a maze 
           pass
   ```
 - **Depth Limit:**
-  It divides the problem into subproblems by limiting the agent's steps in each iteration to twice the size of the maze and tries to approach the global optimum with local optima. It was expected to reach accuracy while increasing efficiency in larger and more complex environments. The results of the tests are as follows:
+  It divides the problem into subproblems by limiting the agent's steps in each iteration to twice the size of the maze and tries to approach the global optimum with local optima. It was expected to reach accuracy while increasing efficiency in larger and more complex environments. The results of the tests are in below.
 
-    # Experiment Results: Maze Solving Performance
+  #### 3.1. Experiment Results: Maze Solving Performance
 
   This table presents the results of maze-solving experiments using two different methods: **Random Start Condition** and **Fixed Step Size**. The experiments were conducted on mazes of increasing sizes, measuring the number of training epochs, success rate, and the total time taken.
 
@@ -138,7 +138,7 @@ This project implements a reinforcement learning environment for solving a maze 
   | 15×15     | Random Start Condition  | 29999  | 55               | 36.95           |
   |           | Fixed Step Size         | 29999  | 67               | 9.16            |
 
-  ## Observations:
+  #### Observations:
   - **Random Start Condition** tends to require more epochs and sometimes struggles with larger mazes, achieving lower success rates.
   - **Fixed Step Size** generally reaches 100% success rate faster and in less time.
   - As maze size increases, training time grows significantly, with **Random Start Condition** showing instability in larger mazes (e.g., 15×15 only achieves 55% success).
