@@ -107,7 +107,7 @@ This project implements a reinforcement learning environment for solving a maze 
 
 - **Experiment Results: Maze Solving Performance:**
 
-  This table presents the results of maze-solving experiments using two different methods: **Random Start Condition** and **Fixed Step Size**. The experiments were conducted on mazes of increasing sizes, measuring the number of training epochs for success, success rate, and the total time taken.
+  This table presents the results of maze-solving experiments using two different methods: **Random Start Condition** and **Fixed Step Size**. 'Random Start Condition' represents the traditional reinforcemation method that tries to win the game by starting from a random point in each epoch. 'Fixed Step Size' represents the reinforcement learning structure where we set a depth limit. The experiments were conducted on mazes of increasing sizes, measuring the number of training epochs for success, success rate, and the total time taken.
 
   | Maze Size | Method                  | Epoch  | Success Rate (%) | Time Taken (hr) |
   |-----------|-------------------------|--------|------------------|-----------------|
@@ -147,10 +147,6 @@ This project implements a reinforcement learning environment for solving a maze 
   - While there is no significant change in the training results of small mazes, in large mazes Random Start Condition lags behind the performance and a great time efficiency is achieved with Fixed Step Size.
 
   These results suggest that **Fixed Step Size** is more efficient for larger mazes, ensuring both higher success rates and reduced training time.
-
-
-- **Training Loop:**
-  Iterates through episodes to update policies and learn optimal paths. Random start states are used in each epoch to enhance exploration and generalization.
 
 ---
 
