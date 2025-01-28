@@ -103,6 +103,49 @@ This project implements a reinforcement learning environment for solving a maze 
 - **Depth Limit:**
   It divides the problem into subproblems by limiting the agent's steps in each iteration to twice the size of the maze and tries to approach the global optimum with local optima. It was expected to reach accuracy while increasing efficiency in larger and more complex environments. The results of the tests are as follows:
 
+    # Experiment Results: Maze Solving Performance
+
+  This table presents the results of maze-solving experiments using two different methods: **Random Start Condition** and **Fixed Step Size**. The experiments were conducted on mazes of increasing sizes, measuring the number of training epochs, success rate, and the total time taken.
+
+  | Maze Size | Method                  | Epoch  | Success Rate (%) | Time Taken (hr) |
+  |-----------|-------------------------|--------|------------------|-----------------|
+  | 2×2       | Random Start Condition  | 138    | 100              | 0.002           |
+  |           | Fixed Step Size         | 312    | 100              | 0.007           |
+  | 3×3       | Random Start Condition  | 554    | 100              | 0.031           |
+  |           | Fixed Step Size         | 541    | 100              | 0.032           |
+  | 4×4       | Random Start Condition  | 686    | 100              | 0.09            |
+  |           | Fixed Step Size         | 365    | 100              | 0.03            |
+  | 5×5       | Random Start Condition  | 1186   | 100              | 0.30            |
+  |           | Fixed Step Size         | 2814   | 100              | 0.91            |
+  | 6×6       | Random Start Condition  | 4038   | 100              | 0.61            |
+  |           | Fixed Step Size         | 2150   | 100              | 0.30            |
+  | 7×7       | Random Start Condition  | 5921   | 100              | 1.38            |
+  |           | Fixed Step Size         | 3325   | 100              | 0.51            |
+  | 8×8       | Random Start Condition  | 3729   | 100              | 2.33            |
+  |           | Fixed Step Size         | 4006   | 100              | 1.23            |
+  | 9×9       | Random Start Condition  | 29999  | 80               | 12.30           |
+  |           | Fixed Step Size         | 4711   | 100              | 2.22            |
+  | 10×10     | Random Start Condition  | 29999  | 88               | 16.79           |
+  |           | Fixed Step Size         | 10110  | 100              | 2.34            |
+  | 11×11     | Random Start Condition  | 12299  | 100              | 9.77            |
+  |           | Fixed Step Size         | 11625  | 100              | 4.83            |
+  | 12×12     | Random Start Condition  | 29999  | 63               | 23.52           |
+  |           | Fixed Step Size         | 15317  | 100              | 5.35            |
+  | 13×13     | Random Start Condition  | 29999  | 80               | 19.68           |
+  |           | Fixed Step Size         | 18465  | 100              | 6.54            |
+  | 14×14     | Random Start Condition  | 29999  | 86               | 23.01           |
+  |           | Fixed Step Size         | 20834  | 100              | 7.85            |
+  | 15×15     | Random Start Condition  | 29999  | 55               | 36.95           |
+  |           | Fixed Step Size         | 29999  | 67               | 9.16            |
+
+  ## Observations:
+  - **Random Start Condition** tends to require more epochs and sometimes struggles with larger mazes, achieving lower success rates.
+  - **Fixed Step Size** generally reaches 100% success rate faster and in less time.
+  - As maze size increases, training time grows significantly, with **Random Start Condition** showing instability in larger mazes (e.g., 15×15 only achieves 55% success).
+
+  These results suggest that **Fixed Step Size** is more efficient for larger mazes, ensuring both higher success rates and reduced training time.
+
+
 - **Training Loop:**
   Iterates through episodes to update policies and learn optimal paths. Random start states are used in each epoch to enhance exploration and generalization.
 
