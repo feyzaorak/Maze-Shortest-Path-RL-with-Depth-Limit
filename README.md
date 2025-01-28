@@ -144,7 +144,8 @@ This project implements a reinforcement learning environment for solving a maze 
 
   - **Random Start Condition** tends to require more epochs and sometimes struggles with larger mazes, achieving lower success rates.
   - **Fixed Step Size** generally reaches 100% success rate faster and in less time.
-  - While there is no significant change in the training results of small mazes, in large mazes Random Start Condition lags behind the performance and a great time efficiency is achieved with Fixed Step Size.
+  
+  While there is no significant change in the training results of small mazes, in large mazes Random Start Condition lags behind the performance and a great time efficiency is achieved with Fixed Step Size.
 
   These results suggest that **Fixed Step Size** is more efficient for larger mazes, ensuring both higher success rates and reduced training time.
 
